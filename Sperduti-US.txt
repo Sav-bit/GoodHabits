@@ -1,0 +1,5 @@
+As a user, I want to share my experiences with other users, so that we can motivate each other. 
+
+As a veteran user, I want to propose my own challenges, so that I can do something I like. 
+
+As a user, I want a set of standard challenges, so that I can do something even if I don’t participate in the active challenge. 
