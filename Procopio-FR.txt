@@ -1,0 +1,5 @@
+The system shall allow the user to choose the nature of the challenge. 
+
+The system shall provide a poll system for the next monthly challenges. 
+
+The system shall provide a platform to suggest challenges. 
