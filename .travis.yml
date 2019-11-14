@@ -5,7 +5,7 @@ addons:
  sonarcloud:
  organization "sav-bit"
  token:
-  secure : "bb7242f455ed61093070f134b981c0d49ff7c179"
+  secure: "bb7242f455ed61093070f134b981c0d49ff7c179"
 script: 
 - ant build
 - sonar-scanner
