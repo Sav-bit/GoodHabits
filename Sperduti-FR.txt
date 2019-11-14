@@ -1,5 +1,0 @@
-The system shall provide a section in each challenge to share text and media. 
-
-The system shall provide these statistics for each user: the number of challenges in which they partecipated, what challenges they were and the percentage of completion of each challenge with a list of the days in which the challenge was or was not done. 
-
-The system shall provide a set of pre-made challenges. 
