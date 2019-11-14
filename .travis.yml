@@ -3,7 +3,7 @@ jdk:
 - openjdk8
 addons:
  sonarcloud:
- organization "sav-bit"
+ organization: "sav-bit"
  token:
   secure: "bb7242f455ed61093070f134b981c0d49ff7c179"
 script: 
