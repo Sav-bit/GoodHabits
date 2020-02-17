@@ -26,7 +26,7 @@ public class homeController {
     
     
     @FXML
-    private Button logout_input;
+    private MenuItem logout_input;
     
 
     
@@ -37,9 +37,9 @@ public class homeController {
 	    	Parent logOut_parent = FXMLLoader.load(getClass().getResource("Login.fxml"));
 	    	Scene logOutViewScene = new Scene(logOut_parent);
 
+	    	Stage window = (Stage) myMenuBar.getScene().getWindow();
 	    	
-	    	
-	    	Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+	    	//Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();   no!!!!
 	    	window.setScene(logOutViewScene);
 	    	window.show();
 	    }
