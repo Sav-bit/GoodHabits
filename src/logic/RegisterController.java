@@ -60,7 +60,12 @@ public class RegisterController {
 			boolean c = MYSQLUserDAOImpl.insertUser(myuser, pass, mail);
 			//boolean c = true;
 			if(c) {
-				label_register.setText("You are register");
+				Parent home_parent = FXMLLoader.load(getClass().getResource("home.fxml"));
+		    	Scene registerViewScene = new Scene(home_parent);
+		    	
+		    	Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+		    	window.setScene(registerViewScene);
+		    	window.show();
 			}else {
 				label_register.setText("Qualcosa è andato storto");
 			}

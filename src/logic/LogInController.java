@@ -64,8 +64,14 @@ public class LogInController {
 					fail.setText("Login failed: Email not found");;
 				
 		   }
-			else
-				fail.setText("YEEEEEEEEEEEE");
+			else {
+				Parent home_parent = FXMLLoader.load(getClass().getResource("home.fxml"));
+		    	Scene registerViewScene = new Scene(home_parent);
+		    	
+		    	Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+		    	window.setScene(registerViewScene);
+		    	window.show();
+			}
 		}
     }
     
