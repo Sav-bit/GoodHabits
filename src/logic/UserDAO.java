@@ -12,4 +12,9 @@ public interface UserDAO {
 		 
 		return true;
 	}
+	
+	public static boolean insertUser(String username, String password, String email) {
+		 
+		return true;
+	}
 }

@@ -57,9 +57,13 @@ public class RegisterController {
 		}
 		else	{
 			//get name and search in the database for the user
-			//boolean c = MYSQLUserDAOImpl.checkUser(myuser, pass);
+			boolean c = MYSQLUserDAOImpl.insertUser(myuser, pass, mail);
 			//boolean c = true;
-			label_register.setText("You are register");
+			if(c) {
+				label_register.setText("You are register");
+			}else {
+				label_register.setText("Qualcosa è andato storto");
+			}
 		}
 			
     }

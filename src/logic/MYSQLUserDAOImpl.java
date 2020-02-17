@@ -14,7 +14,7 @@ import java.util.List;
 public class MYSQLUserDAOImpl implements UserDAO {
 	
 	/** La query per l'inserimento di un nuovo cliente */
-    private static final String CREATE_QUERY = "INSERT INTO user (first_name, last_name, email, password) VALUES (?,?,?,?)";
+    private static final String INSERT_USER = "INSERT INTO user (username, password, status, nome, cognome, data_nascita, email) VALUES (?,?,\"normal\",NULL,NULL,NULL,?)";
     /** La query per la lettura di un singolo cliente. */
     private static final String READ_QUERY = "SELECT id, first_name, last_name, email, password FROM customers WHERE id = ?";
     /** La query per la lettura di tutti i clienti. */
@@ -106,47 +106,7 @@ public class MYSQLUserDAOImpl implements UserDAO {
         return customer;
 	}
 	
-	public int createCustomer(User customer) {
-        Connection conn = null;
-        PreparedStatement preparedStatement = null;
-        ResultSet result = null;
-        try {
-            conn = MYSQLDAOFactory.createConnection();
-            preparedStatement = conn.prepareStatement(CREATE_QUERY, Statement.RETURN_GENERATED_KEYS);
-            preparedStatement.setString(1, customer.getFirstName());
-            preparedStatement.setString(2, customer.getLastName());
-            preparedStatement.setString(3, customer.getEmail());
-            preparedStatement.setString(4, customer.getPassword());
-            preparedStatement.execute();
-            result = preparedStatement.getGeneratedKeys();
- 
-            if (result.next() && result != null) {
-                return result.getInt(1);
-            } else {
-                return -1;
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                result.close();
-            } catch (SQLException rse) {
-                rse.printStackTrace();
-            }
-            try {
-                preparedStatement.close();
-            } catch (Exception sse) {
-                sse.printStackTrace();
-            }
-            try {
-                conn.close();
-            } catch (Exception cse) {
-                cse.printStackTrace();
-            }
-        }
- 
-        return -1;
-    }
+	
 		
  
 	public boolean updateCustomer(User customer) {
@@ -246,6 +206,43 @@ public class MYSQLUserDAOImpl implements UserDAO {
 		return false;
  
 }
+	
+	public static boolean insertUser(String username, String password, String email) {
+		 
+		Connection conn = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet result = null;
+        try {
+            conn = MYSQLDAOFactory.createConnection();
+            preparedStatement = conn.prepareStatement(INSERT_USER);
+            preparedStatement.setString(1,username);
+            preparedStatement.setString(2,  password);
+            preparedStatement.setString(3,  email);
+            //result = preparedStatement.executeQuery();
+            int count = preparedStatement.executeUpdate();
+            if(count>0) {
+            	return true;
+            }else {
+            	return false;
+            }
+            
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            
+            try {
+                preparedStatement.close();
+            } catch (SQLException sse) {
+                sse.printStackTrace();
+            }
+            try {
+                conn.close();
+            } catch (SQLException cse) {
+                cse.printStackTrace();
+            }
+	}
+		return false;
+	}
 	
 	
 }
