@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logic.LogInController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logic.LogInController">
    <children>
       <MenuBar layoutX="14.0" layoutY="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <menus>
@@ -52,6 +52,7 @@
                      </children>
                   </GridPane>
                   <Label fx:id="fail" alignment="CENTER" prefHeight="50.0" prefWidth="215.0" textFill="#dd0000" GridPane.columnIndex="1" GridPane.valignment="BOTTOM" />
+                  <Label fx:id="label_register" alignment="CENTER" prefHeight="50.0" prefWidth="215.0" textFill="#00a5db" GridPane.columnIndex="1" GridPane.valignment="BOTTOM" />
                </children>
             </GridPane>
          </children>

@@ -3,9 +3,14 @@ package logic;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import javafx.scene.control.Label;
 
 
@@ -27,10 +32,14 @@ public class LogInController {
     @FXML
     private Label fail;
     
+    @FXML
+    private Label label_register;
+    
 
 
     @FXML
     void login(ActionEvent event) throws Exception {
+    	label_register.setText("");
     	String myuser = username.getText();
 		boolean Bool = myuser.equals("");
 		String pass = password.getText();
@@ -42,7 +51,7 @@ public class LogInController {
 			*/
 			
 			if(Bool) 	
-				fail.setText("Login failed: You need an email");
+				fail.setText("Login failed: You need an username");
 			else
 				fail.setText("Login failed: You need a pass");
 		}
@@ -62,7 +71,15 @@ public class LogInController {
     
     @FXML
     void register(ActionEvent event) throws Exception {
-    	fail.setText("clicked register");
+    	fail.setText("");
+    	label_register.setText("Insert email for registration");
+    	
+    	Parent register_parent = FXMLLoader.load(getClass().getResource("Register.fxml"));
+    	Scene registerViewScene = new Scene(register_parent);
+    	
+    	Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+    	window.setScene(registerViewScene);
+    	window.show();
     }
     
 }
