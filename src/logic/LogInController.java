@@ -57,7 +57,9 @@ public class LogInController {
 		}
 		else	{
 			//get name and search in the database for the user
-			boolean c = MYSQLUserDAOImpl.checkUser(myuser, pass);
+			String passmd5 = md5Generator.md5(pass);
+			
+			boolean c = MYSQLUserDAOImpl.checkUser(myuser, passmd5);
 			//boolean c = true;
 			if(c != true) {
 				

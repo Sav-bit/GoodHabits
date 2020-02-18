@@ -57,7 +57,10 @@ public class RegisterController {
 		}
 		else	{
 			//get name and search in the database for the user
-			boolean c = MYSQLUserDAOImpl.insertUser(myuser, pass, mail);
+			String passmd5 = md5Generator.md5(pass);
+
+			
+			boolean c = MYSQLUserDAOImpl.insertUser(myuser, passmd5, mail);
 			//boolean c = true;
 			if(c) {
 				Parent home_parent = FXMLLoader.load(getClass().getResource("home.fxml"));
