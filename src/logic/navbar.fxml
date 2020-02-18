@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="250.0" minHeight="60.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="60.0" prefWidth="619.0" style="-fx-background-color: #8bc34a;" styleClass="navbar" stylesheets="@goodHabits.css" xmlns="http://javafx.com/javafx/8.0.202-ea" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="250.0" minHeight="60.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="60.0" prefWidth="619.0" style="-fx-background-color: #8bc34a;" styleClass="navbar" stylesheets="@goodHabits.css" xmlns="http://javafx.com/javafx/8.0.202-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="navbarController">
    <left>
       <Text fx:id="navbarBrand" strokeType="OUTSIDE" strokeWidth="0.0" text="GoodHabits" BorderPane.alignment="CENTER">
          <font>
@@ -26,13 +26,13 @@
          <children>
             <MenuButton alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="50.0" styleClass="navbar-item" text="My profile">
               <items>
-                <MenuItem mnemonicParsing="false" styleClass="navbar-item" text="Profile" />
-                <MenuItem id="logout" mnemonicParsing="false" styleClass="logout" text="logout" />
+                <MenuItem id="myProfile" mnemonicParsing="false" styleClass="navbar-item" text="Profile" />
+                <MenuItem id="logout" mnemonicParsing="false" onAction="#logout" styleClass="logout" text="logout" />
               </items>
             </MenuButton>
-            <Button mnemonicParsing="false" prefHeight="50.0" styleClass="navbar-item" text="Vote" />
-            <Button mnemonicParsing="false" prefHeight="50.0" styleClass="navbar-item" text="Challenges" />
-            <Button mnemonicParsing="false" prefHeight="50.0" styleClass="navbar-item" text="Home" />
+            <Button id="vote" mnemonicParsing="false" prefHeight="50.0" styleClass="navbar-item" text="Vote" />
+            <Button id="challenges" mnemonicParsing="false" prefHeight="50.0" styleClass="navbar-item" text="Challenges" />
+            <Button id="home" mnemonicParsing="false" prefHeight="50.0" styleClass="navbar-item" text="Home" />
          </children>
          <opaqueInsets>
             <Insets />
