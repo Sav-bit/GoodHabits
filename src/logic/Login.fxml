@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logic.LogInController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@goodHabits.css" xmlns="http://javafx.com/javafx/8.0.202-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logic.LogInController">
    <children>
       <MenuBar layoutX="14.0" layoutY="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <menus>
@@ -43,10 +43,10 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label prefHeight="45.0" prefWidth="137.0" text="Nickname" />
-                        <Label prefHeight="56.0" prefWidth="119.0" text="Password" GridPane.rowIndex="1" />
-                        <Button fx:id="login_input" mnemonicParsing="false" onAction="#login" prefHeight="90.0" prefWidth="266.0" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Button fx:id="register_input" mnemonicParsing="false" onAction="#register" prefHeight="71.0" prefWidth="203.0" text="Register" GridPane.rowIndex="2" />
+                        <Label prefHeight="45.0" prefWidth="137.0" text="Username:" />
+                        <Label prefHeight="56.0" prefWidth="119.0" text="Password:" GridPane.rowIndex="1" />
+                        <Button fx:id="login_input" mnemonicParsing="false" onAction="#login" styleClass="btn" text="Login" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <Button fx:id="register_input" mnemonicParsing="false" onAction="#register" styleClass="btn" text="Register" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                         <TextField fx:id="username" prefWidth="116.0" GridPane.columnIndex="1" />
                         <PasswordField fx:id="password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                      </children>
