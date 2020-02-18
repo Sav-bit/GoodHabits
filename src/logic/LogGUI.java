@@ -16,8 +16,9 @@ public class LogGUI extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		try	{
 			Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
-			primaryStage.setTitle("AppBar");
+			primaryStage.setTitle("GoodHabits - login");
 		    Scene scene = new Scene(root);
+		    scene.getStylesheets().add(getClass().getResource("goodHabits.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		}catch(Exception e)	{
