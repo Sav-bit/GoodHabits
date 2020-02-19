@@ -16,17 +16,16 @@ import javafx.stage.Stage;
 import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
 
 public class homeController {
 	
-	@FXML
-	private MenuBar myMenuBar;
-	
-    
-    
-    @FXML
-    private MenuItem logout_input;
+	 @FXML
+	  private MenuButton menuButton;
+	  
+	  @FXML
+	  private MenuItem logout_input;
     
 
     
@@ -37,9 +36,9 @@ public class homeController {
 	    	Parent logOut_parent = FXMLLoader.load(getClass().getResource("Login.fxml"));
 	    	Scene logOutViewScene = new Scene(logOut_parent);
 
-	    	Stage window = (Stage) myMenuBar.getScene().getWindow();
+	    	Stage window = (Stage) menuButton.getScene().getWindow();
 	    	
-	    	//Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();   no!!!!
+	    	//Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();   
 	    	window.setScene(logOutViewScene);
 	    	window.show();
 	    }
