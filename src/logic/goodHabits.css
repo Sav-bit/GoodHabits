@@ -1,3 +1,20 @@
+
+/* import Montserrat font
+***********************************************/
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url('./font/Montserrat.ttf');
+}
+
+/* Text
+***********************************************/
+
+.gh-txt{
+  -fx-font-family: Montserrat;
+}
+
+/* navbar styling
+***********************************************/
 .navbar-item{
   -fx-background-color: none;
 }
@@ -12,6 +29,7 @@
 }
 
 .navbar {
+  -fx-font-family: Montserrat;
   -fx-background-color: #8bc34a;
 }
 
@@ -27,10 +45,15 @@
   -fx-text-fill: #f23232;
 }
 
+/* buttons
+***************************************************/
 .btn {
   -fx-background-color: #8bc34a;
   -fx-background-radius: 999;
   -fx-padding: 10 14 10 14;
+  -fx-font-family: Montserrat;
+  -fx-font-weight: bold;
+  -fx-text-fill: white;
 }
 
 .btn:hover {
