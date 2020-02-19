@@ -2,15 +2,18 @@
 /* import
 ***********************************************/
 @font-face {
-    font-family: 'Montserrat', sans-serif;
-    src: url("./font/Montserrat-Regular.ttf");
+    src: url("./font/Montserrat-Regular.ttf"), url("./font/Montserrat-Bold.ttf");
 }
 
 /* Text
 ***********************************************/
 
-.gh-txt{
+.root *{
   -fx-font-family: 'Montserrat';
+}
+
+.active{
+  -fx-font-weight:bold;
 }
 
 .logo{

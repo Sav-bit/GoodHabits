@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
@@ -15,11 +16,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logic.homeController">
+<VBox prefHeight="400.0" prefWidth="640.0" stylesheets="@goodHabits.css" xmlns="http://javafx.com/javafx/8.0.202-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logic.homeController">
   <children>
       <BorderPane maxHeight="250.0" minHeight="60.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="60.0" prefWidth="619.0" style="-fx-background-color: #8bc34a;" styleClass="navbar" stylesheets="@goodHabits.css">
          <left>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="GoodHabits" BorderPane.alignment="CENTER">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="logo" text="GoodHabits" BorderPane.alignment="CENTER">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -39,7 +40,11 @@
                   </MenuButton>
                   <Button id="vote" mnemonicParsing="false" prefHeight="50.0" styleClass="navbar-item" text="Vote" />
                   <Button id="challenges" mnemonicParsing="false" prefHeight="50.0" styleClass="navbar-item" text="Challenges" />
-                  <Button id="home" mnemonicParsing="false" prefHeight="50.0" styleClass="navbar-item" text="Home" />
+                  <Button id="home" mnemonicParsing="false" prefHeight="50.0" text="Home">
+                     <styleClass>
+                        <String fx:value="navbar-item" />
+                        <String fx:value="active" />
+                     </styleClass></Button>
                </children>
                <opaqueInsets>
                   <Insets />
