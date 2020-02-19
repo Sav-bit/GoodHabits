@@ -20,7 +20,7 @@
       </MenuBar>
       <AnchorPane prefHeight="200.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <GridPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <GridPane layoutY="1.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -43,12 +43,12 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label prefHeight="45.0" prefWidth="137.0" text="Username:" />
-                        <Label prefHeight="56.0" prefWidth="119.0" text="Password:" GridPane.rowIndex="1" />
+                        <Label prefHeight="45.0" prefWidth="137.0" styleClass="gh-txt" text="Username:" />
+                        <Label prefHeight="56.0" prefWidth="119.0" styleClass="gh-txt" text="Password:" GridPane.rowIndex="1" />
                         <Button fx:id="login_input" mnemonicParsing="false" onAction="#login" styleClass="btn" text="Login" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                         <Button fx:id="register_input" mnemonicParsing="false" onAction="#register" styleClass="btn" text="Register" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                        <TextField fx:id="username" prefWidth="116.0" GridPane.columnIndex="1" />
-                        <PasswordField fx:id="password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="username" prefWidth="116.0" styleClass="gh-txt" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <PasswordField fx:id="password" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                      </children>
                   </GridPane>
                   <Label fx:id="fail" alignment="CENTER" prefHeight="50.0" prefWidth="215.0" textFill="#dd0000" GridPane.columnIndex="1" GridPane.valignment="BOTTOM" />
